@@ -1,0 +1,13 @@
+domain,baseline,cv_f1,cv_recall
+surface_water,parameter_code only,0.355,0.8
+surface_water,no value features,0.369,0.578
+surface_water,full (fixed),0.433,0.654
+air,parameter_code only,0.334,1.0
+air,no value features,0.534,0.841
+air,full (fixed),0.458,0.599
+ground_water,parameter_code only,0.224,0.8
+ground_water,no value features,0.232,0.367
+ground_water,full (fixed),0.249,0.295
+noise,parameter_code only,0.255,1.0
+noise,no value features,0.512,0.897
+noise,full (fixed),0.549,0.699

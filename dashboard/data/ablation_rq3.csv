@@ -1,0 +1,5 @@
+domain,recall_A_no_spatial,f1_A_no_spatial,n_train,recall_B_chainage_only,f1_B_chainage_only,recall_C_chainage_typo,f1_C_chainage_typo,recall_D_typology_only,f1_D_typology_only,D_minus_A,C_minus_B
+surface_water,0.679,0.467,881,0.488,0.35,0.483,0.334,0.497,0.355,-0.182,-0.005
+air,0.59,0.514,999,0.569,0.43,0.569,0.454,0.622,0.558,0.032,0.0
+ground_water,0.176,0.187,392,0.242,0.18,0.279,0.196,0.139,0.168,-0.037,0.037
+noise,0.641,0.367,168,0.699,0.549,0.724,0.488,0.699,0.499,0.058,0.025

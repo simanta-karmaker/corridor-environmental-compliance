@@ -1,0 +1,5 @@
+zone_type,chronic,compliant,episodic
+peri_urban,-0.199,0.504,-0.304
+riverine,-0.645,0.391,0.253
+rural_agricultural,-0.499,0.368,0.131
+urban,0.0,0.262,-0.262

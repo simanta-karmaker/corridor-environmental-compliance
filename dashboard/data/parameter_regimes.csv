@@ -1,0 +1,23 @@
+domain,parameter,n,exc_rate,p11,p01,persistence,label,cluster,regime
+air,CO,104,0.0,,0.0,0.0,CO,0,compliant
+air,NO,146,0.0,,0.0,0.0,NO,0,compliant
+air,NO2,146,0.0,,0.0,0.0,NO2,0,compliant
+air,O3,146,0.0,,0.0,0.0,O3,0,compliant
+air,PM10,260,0.281,0.725,0.124,0.601,PM10,1,episodic
+air,PM2.5,260,0.231,0.638,0.116,0.522,PM2.5,1,episodic
+air,SO2,146,0.0,,0.0,0.0,SO2,0,compliant
+ground_water,As,56,0.018,,0.023,0.0,As,0,compliant
+ground_water,Cl,56,0.0,,0.0,0.0,Cl,0,compliant
+ground_water,Fe,56,0.125,,0.1,0.0,Fe,0,compliant
+ground_water,Mn,56,0.179,0.8,0.154,0.646,Mn,1,episodic
+ground_water,S,56,0.161,0.0,0.25,-0.25,S,0,compliant
+ground_water,TDS,56,0.107,1.0,0.0,1.0,TDS,1,episodic
+ground_water,pH,56,0.0,,0.0,0.0,pH (GR),0,compliant
+noise,Noise_Day,84,0.262,0.684,0.098,0.586,Noise_Day,1,episodic
+noise,Noise_Night,84,0.083,0.333,0.031,0.302,Noise_Night,0,compliant
+surface_water,BOD5,197,0.832,0.87,0.606,0.264,BOD5,2,chronic
+surface_water,COD,197,0.162,0.656,0.013,0.643,COD,1,episodic
+surface_water,DO,197,0.599,0.852,0.208,0.644,DO,2,chronic
+surface_water,Oil_Grease,118,0.0,,0.0,0.0,Oil_Grease,0,compliant
+surface_water,TSS,182,0.088,0.6,0.045,0.555,TSS,1,episodic
+surface_water,pH,110,0.009,,0.01,0.0,pH (SU),0,compliant
