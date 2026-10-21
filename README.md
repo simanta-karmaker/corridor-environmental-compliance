@@ -79,7 +79,8 @@ The notebook was developed on Google Colab. With the raw input files in a Google
 ## Author
 
 **Simanta Karmaker** · MSc Business & Data Analytics (Distinction), Ravensbourne University London
-Supervisor: Farzana Sharmin Mou
+
+Supervised by Farzana Sharmin Mou.
 
 ## Licence
 
