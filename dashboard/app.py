@@ -108,7 +108,7 @@ with t_over:
         cards = [
             (f"{n_read:,}", "#12232B", "Readings w/ standard & typology", "analysis base", "#E8EEF0", "#12232B"),
             (f"{canonical_rate:.1%}", "#B23A2E", "Overall exceedance (704 / 3,497)", "non-compliant", "#F7E4E1", "#B23A2E"),
-            (f"{n_sites}", "#12232B", "Monitoring sites, 4 zones", "36 mapped", "#E8EEF0", "#17708C"),
+            (f"{n_sites}", "#12232B", "Monitoring sites, 4 zones", "typology-linked", "#E8EEF0", "#17708C"),
             ("0.925", "#17708C", "Surface-water holdout recall", "primary", "#E4F0E9", "#2E7D4F"),
         ]
         cols = st.columns(4)
@@ -162,7 +162,7 @@ with t_over:
         st.markdown("""<div class="cc-insight">
           <b>Headline insight.</b> Within riverine zones, 81.5% of exceedances come from chronic
           parameters, while only 17.0% of riverine monitoring observations target them. Across zones,
-          39–56% of effort is spent on parameters that have never breached. See the Priority tab.
+          39–56% of effort is spent on compliant-regime parameters. See the Triage tab.
           <i>(Shares are computed within each zone, not as a zone's slice of the corridor total.)</i>
         </div>""", unsafe_allow_html=True)
     st.caption(FOOTER)
