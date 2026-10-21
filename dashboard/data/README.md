@@ -1,6 +1,6 @@
 # Dashboard data
 
-Anonymised aggregate results exported by the notebook: §15 writes most files and §12b writes the triage files. Sites appear only as codes (S01, S02, …); no place names, coordinates or chainage are included.
+Anonymised aggregate results exported by the notebook and read by the dashboard (`dashboard/app.py`): §15 writes most files and §12b writes the triage files. Sites appear only as codes (S01, S02, …); no place names, coordinates or chainage are included.
 
 | File | Contents | Notebook section |
 |---|---|---|

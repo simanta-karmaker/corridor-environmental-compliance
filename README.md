@@ -10,7 +10,7 @@ MSc Business & Data Analytics dissertation · Ravensbourne University London · 
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
 ![Licence: MIT](https://img.shields.io/badge/Licence-MIT-green)
 
-![Monitoring triage dashboard, leakage audit view](assets/dashboard/dashboard-validation.png)
+![Monitoring triage dashboard, overview tab](assets/dashboard/dashboard-overview.png)
 
 ## Overview
 
@@ -24,8 +24,8 @@ The data cover October 2020 to November 2023 on an anonymised 172 km linear-infr
 - **Honest baselines.** Knowing only which parameter is measured already gives F1 0.224–0.355. The full model beats that in every domain (noise: 0.549 vs 0.255), but for air a model without past readings scores higher still (0.534 vs 0.458).
 - **Prediction is useful but uneven.** Best cross-validated F1 per domain: noise 0.549 (XGBoost), surface water 0.503 (logistic regression), air 0.458 (XGBoost) and groundwater 0.291 (random forest). Noise and groundwater have no readings after the cut-off, so their results are preliminary. On the time-based holdout, surface water reached F1 0.671 (recall 0.925) while air fell to 0.225, so a single holdout window is not treated as a verdict.
 - **Site typology adds little.** Zone type, elevation and hydrology on their own changed recall by −0.032 compared with no spatial information, and by +0.014 on top of position along the corridor. The same design detects a planted zone effect (+0.088 recall) on synthetic data, so this is an informative null result.
-- **Exceedance behaviour groups parameters, not places.** Clustering sites by exceedance behaviour does not recover their zone types (ARI 0.026). Parameters, however, fall into three clear regimes (silhouette 0.715): chronic (BOD5, DO), episodic (PM10, PM2.5, Noise_Day, COD, Mn, TSS, TDS) and compliant (the other 13).
-- **Monitoring effort and exceedance burden are misaligned.** In every zone, 39–56% of readings are of parameters that rarely exceed, while chronic parameters account for 71–82% of exceedances in rural-agricultural and riverine zones.
+- **Exceedance behaviour groups parameters, not places.** Clustering sites by exceedance behaviour does not recover their zone types (ARI 0.026). Parameters, however, fall into three clear regimes by exceedance rate and persistence (silhouette 0.715): chronic (BOD5, DO), episodic (PM10, PM2.5, Noise_Day, COD, Mn, TSS, TDS) and compliant (the other 13).
+- **Monitoring effort and exceedance burden are misaligned.** In every zone, 39–56% of readings are of compliant-regime parameters, while chronic parameters account for 71–82% of exceedances in rural-agricultural and riverine zones.
 
 <p align="center">
   <img src="figures/fig_leakage_audit.png" width="49%" alt="Leakage audit: cross-validated F1 with the leaky and fixed feature sets">
@@ -43,9 +43,16 @@ An interactive Streamlit dashboard presents the results in ten tabs: overview, v
   </tr>
   <tr>
     <td width="50%"><img src="assets/dashboard/dashboard-priority.png" alt="Monitoring priority"><br><sub>Monitoring priority by site (anonymised codes)</sub></td>
-    <td width="50%"><img src="assets/dashboard/dashboard-over-time.png" alt="Exceedance over time"><br><sub>Observed and predicted exceedance over time</sub></td>
+    <td width="50%"><img src="assets/dashboard/dashboard-over-time.png" alt="Exceedance over time"><br><sub>Observed exceedance over time, by zone</sub></td>
   </tr>
 </table>
+
+To run it locally from the repository root:
+
+```bash
+pip install -r dashboard/requirements.txt
+streamlit run dashboard/app.py
+```
 
 ## Approach
 
@@ -62,9 +69,12 @@ An interactive Streamlit dashboard presents the results in ten tabs: overview, v
 
 ```
 notebooks/corridor_compliance_analysis.ipynb   full analysis with outputs (§0–§16)
+dashboard/app.py                               Streamlit dashboard
 dashboard/data/                                anonymised results exported by the notebook
+dashboard/requirements.txt                     Python packages for the dashboard
 figures/                                       charts exported from the notebook
 assets/dashboard/                              dashboard screenshots
+.streamlit/config.toml                         dashboard colour theme
 requirements.txt                               Python packages for the notebook
 ```
 
