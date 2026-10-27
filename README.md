@@ -92,6 +92,8 @@ The notebook was developed on Google Colab. With the raw input files in a Google
 
 Supervised by Farzana Sharmin Mou.
 
+See also: [amazon-review-sentiment](https://github.com/simanta-karmaker/amazon-review-sentiment), a Bidirectional LSTM for classifying product reviews, built for the MSc AI & Machine Learning module.
+
 ## Licence
 
 The code is released under the [MIT Licence](LICENSE). The anonymised result files and figures document the dissertation's findings; the underlying monitoring data are not included.
